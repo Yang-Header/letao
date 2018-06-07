@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 站点图标的引入，rel必须时icon  -->
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- 引入mui的css包 提供基础的样式与组件 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 引入字体图标css，提供页面的基础图标 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入自己的css包 因为是用的是less写的所以要引less包，less中可以直接写css  注意rel="stylesheet/less"-->
+    <link rel="stylesheet/less" href="./less/index.less">
+    <!-- 引入less的编译器 因为less中的css需要编译才能显示，所以必须要先引 -->
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+    
+
+    <!-- 引入mui的js 提供特效的，轮播图等 -->
+    <script src="./lib/mui/js/mui.js" ></script>
+    <!-- 引入获取元素的js zepto -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎js，因为模板引擎依赖zepto 所以在zepto之后引入  用于渲染页面-->
+    <script src="./lib/artTemplate/template.js"></script>
+    <!-- 最后引入自己的js -->
+    <script src="./js/index.js"></script>
+</body>
+</html>
