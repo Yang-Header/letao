@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 站点图标 -->
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- 引入mui的css样式 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入自己的css样式 -->
+    <link rel="stylesheet/less" href="./less/category.less">
+    <!-- 编译工具，没有编译工具不能解码less文件 -->
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+    <!-- 头部 -->
+
+    <header id="header">
+        <a href="#" class="fa fa-arrow-left"></a>
+        <input type="search" placeholder="请输入你的要求">
+        <a href="#" class="fa fa-search" aria-hidden="true"></a>
+    </header>
+
+
+    <div class="main">
+        <div class="categoryLeft">
+            <ul>
+                <!-- <li class="active">第一个1</li>
+                <li>第一个2</li>
+                <li>第一个3</li>
+                <li>第一个4</li>
+                <li>第一个5</li> -->
+            </ul>
+        </div>
+        <div class="categoryRight">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <ul class="mui-row">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- 底部 -->
+     <footer>
+            <div class="mui-row">
+                <a href="" class="mui-col-sm-3  mui-col-xs-3 fa fa-home active">
+                    <span>首页</span>
+                </a>
+                <a href="" class="mui-col-sm-3 mui-col-xs-3 fa fa-bars">
+                    <span>分类</span>
+                </a>
+                <a href="" class="mui-col-sm-3 mui-col-xs-3 fa fa-shopping-cart">
+                    <span>购物车</span>
+                </a>
+                <a href="" class="mui-col-sm-3 mui-col-xs-3 fa fa-user">
+                    <span>会员中心</span>
+                </a>
+            </div>
+    </footer>
+    <script id="getCategory" type="text/html">
+        {{each rows as value i}}
+            <li class="{{i==0?'active':''}}" data-id="{{value.id}}">{{value.categoryName}}</li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="categoryRight">
+       {{each rows as value i}}
+            <li class="mui-col-xs-4">
+                <a href="#">
+                    <img src="{{value.brandLogo}}" alt="">
+                    <p>{{value.brandName}}</p>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <!-- 引入mui的js 提供特效的，轮播图等 -->
+    <script src="./lib/mui/js/mui.js" ></script>
+    <!-- 引入获取元素的js zepto -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎js，因为模板引擎依赖zepto 所以在zepto之后引入  用于渲染页面-->
+    <script src="./lib/artTemplate/template.js"></script>
+    <!-- 最后引入自己的js -->
+    <script src="./js/category.js"></script>     
+</body>
+</html>

@@ -1,22 +1,8 @@
 //使用变量命名一个颜色
-@color:#006699;
+@import './base.less';
 
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-img{
-    display: block;
-}
-
-html,body{
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-}
-
+// 头部
 #header{
     position: fixed;
     top: 0;
@@ -25,7 +11,7 @@ html,body{
     height: 40px;
     background-color: @color;
     margin: 0;
-    z-index: 2;
+    z-index: 999;
     h4{
         font-weight: normal;
         line-height: 35px;
@@ -40,9 +26,9 @@ html,body{
     }
 }
 
-
+//轮播图部分
 #lunbo{
-    margin-top: 40px;
+    // margin-top: 40px;
     position: relative;
     .mui-slider-indicator{
         position: absolute;
@@ -51,6 +37,8 @@ html,body{
         transform: translate(-50%);
     }
 }
+
+//广告部分
 #banner{
     margin: 0 15px;
     // position: relative;
@@ -112,6 +100,7 @@ html,body{
 
 }
 
+//品牌专区
 #brand{
     margin: 0 15px;
     .brand-b{
@@ -138,52 +127,19 @@ html,body{
 
 
 //运动部分
- #sport{
+ #sport,#weman,#man{
      margin: 0 15px;
      .sport-title{
-        height: 40px;
+        // height: 40px;
         width: 100%;
-        background: url('../images/title1.png') center -15px no-repeat;
-        background-size: cover;
+        img{
+            // margin-top: -10px;
+            width: 100%;
+            object-fit: cover;
+        }
      }
 
-     .sport-content{
-        width: 100%;
-         display:flex;
-         
-         a{
-             background-color: #fff;
-             
-             flex: 50%;
-             padding: 5px 5px;
-             .box{
-                 padding: 10px 0;
-                 width: 100%;
-                 box-shadow: 0 0 10px 0px #ccc;
-                img{
-                    width: 100%;
-                }
-               .name{
-                   padding: 0 5px;
-                   text-align: center;
-                   color: #aaa;
-               } 
-               p{
-                   text-align: center;
-                   color: red;
-                   span{
-                       color: #bbb;
-                       text-decoration: line-through;
-                   }
-               }
-               button{
-                   display:block;
-                   margin: 0 auto;
-                   background-color: #006699;
-                   color: white;
-               }
-             }
-             
-         }
-     }
+    
  }
+
+ 

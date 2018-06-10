@@ -1,0 +1,91 @@
+@import "./base.less";
+
+#header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 40px;
+    background-color: @color;
+    margin: 0;
+    z-index: 999;
+    padding: 0 30px;
+
+    .fa-arrow-left{
+        position: absolute;
+        color: white;
+        top: 10px;
+        left: 10px;
+    }
+    input{
+        background-color: #fff;
+        margin-top: 3px;
+        text-align: left;  
+        font-size: 14px; 
+    }
+    .fa-search{
+        position: absolute;
+        color: white;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+
+//主体部分
+.main{
+    height: 100%;
+    display: flex;
+    background-color: #ccc;
+    .categoryLeft{
+        width: 80px;
+        >ul{
+            width: 100%;
+            background-color: #fff;
+            >li{
+               text-align: center;
+               height: auto;
+               border-bottom: 1px solid #ccc;
+               line-height: 40px; 
+               font-size: 14px;
+               &.active{
+                   background-color: #ccc;
+               }
+            }
+        }
+    }
+   
+
+    .categoryRight{
+        flex: 1;
+        height: 100%;
+        position: relative;
+        .mui-scroll-wrapper{ 
+            height: 100%;
+           .mui-scroll{
+            height: 101%;
+          
+        ul{ 
+            padding: 10px;
+            li{
+                background-color: #fff;
+                list-style: none;
+                a{  
+                    text-align: center;
+                    height: 100%;
+                    width: 100%;
+                    display: block;
+                    img{
+                        // height: 100%;
+                        width: 100%;
+                        vertical-align: middle;
+                        // object-fit: cover
+                    }
+                }
+            }
+        }
+    }
+}
+}
+}
+
