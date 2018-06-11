@@ -1,0 +1,49 @@
+@import './base.less';
+
+#header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 40px;
+    background-color: @color;
+    margin: 0;
+    z-index: 999;
+    h4{
+        font-weight: normal;
+        line-height: 35px;
+        text-align: center;
+        color: #fff;
+    }
+    .fa-arrow-left{
+        position: absolute;
+        color: white;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+.main{
+    // padding-top: 50px;
+    form{
+        margin-top: 10px;
+        padding: 0 20px;
+        position: relative;
+        input{
+            height: 30px;
+            border-color: @color;
+            font-size: 12px;
+        }
+        .searchIcon{
+            position: absolute;
+            // font-size: 16px;
+            // width: 30px;  
+            right: 20px;
+            top: 0;
+            border-color: @color;
+            background-color: @color;
+            height: 30px;
+        }
+    } 
+}
+

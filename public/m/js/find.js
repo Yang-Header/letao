@@ -38,9 +38,9 @@ $(function () {
                 //获取数据
                 var text = $('.main input').val();
                 //判断数据，是否为空值
-
                 if(!text.trim()){
                     alert('请输入你要搜索的商品');
+                    
                     return;
                 }
 
@@ -80,8 +80,10 @@ $(function () {
                 //把新的数据添加到LocalStorage中
                 window.localStorage.setItem('searchData',JSON.stringify(arr))
                 //查询数据 并渲染数据
-
+                
                 leTao.getLocalStorage();
+                this.href='findProduct.html';
+
               })
          },
 

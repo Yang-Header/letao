@@ -12,13 +12,13 @@
     <!-- 字体图标 -->
     <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
     <!-- 引入自己的css样式 -->
-    <link rel="stylesheet/less" href="./less/find.less">
+    <link rel="stylesheet/less" href="./less/findProduct.less">
     <!-- 编译工具，没有编译工具不能解码less文件 -->
     <script src="./lib/less/less.js"></script>
 </head>
 <body>
     <header id="header">
-        <a href="#" class="fa fa-arrow-left"></a>
+        <a href="find.html" class="fa fa-arrow-left"></a>
         <h4>搜索中心</h4>
         <!-- <a href="#" class="fa fa-search" aria-hidden="true"></a> -->
     </header>
@@ -28,23 +28,7 @@
            <input type="text" placeholder="请输入你想搜索的内容">
            <a href="#"  class="mui-btn mui-btn-primary searchIcon">搜索</a>
        </form>
-       <div class="hostory">
-           <span>历史搜索</span>
-           <a href="#" class="fa fa-trash mui-pull-right">清空记录</a>
-           <div class="hostoryData">
-
-           </div>
-           <!-- <ul>
-               <li>
-                   <span class="product">时间</span>
-                   <span class="fa fa-times mui-pull-right"></span>
-                </li>
-                <li>
-                        <span class="product">时间</span>
-                        <span class="fa fa-times mui-pull-right"></span>
-                     </li>
-           </ul> -->
-       </div>
+       
     </section>
 
 
@@ -64,18 +48,7 @@
             </a>
         </div>
     </footer>
-    <script id="search" type="text/html">
-      {{if rows.length}}
-        <ul>
-            {{each rows}}
-            <li data-id='{{$value.id}}'>
-                <span class="product">{{$value.searchData}}</span>
-                <span class="fa fa-times mui-pull-right delete"></span>
-            </li>
-            {{/each}}
-        </ul>
-        {{/if}}
-    </script>
+    
     <!-- 引入mui的js 提供特效的，轮播图等 -->
     <script src="./lib/mui/js/mui.js" ></script>
     <!-- 引入获取元素的js zepto -->
@@ -83,6 +56,6 @@
     <!-- 引入模板引擎js，因为模板引擎依赖zepto 所以在zepto之后引入  用于渲染页面-->
     <script src="./lib/artTemplate/template.js"></script>
     <!-- 最后引入自己的js -->
-    <script src="./js/find.js"></script>
+    <script src="./js/findProduct.js"></script>
 </body>
 </html>
