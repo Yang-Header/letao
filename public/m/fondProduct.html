@@ -24,14 +24,111 @@
     </header>
 
     <section class="main">
+
+        <div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                            <form action="">
+                                <input type="text" placeholder="请输入你想搜索的内容">
+                                <a href="#"  class="mui-btn mui-btn-primary searchIcon">搜索</a>
+                            </form>
+                            <div class="section">
+                                <div class="mui-row">
+                                     <a href="#" class="mui-col-xs-3 active ">
+                                         上架时间
+                                         <span class="fa fa-angle-down"></span>
+                                     </a>
+                                     <a href="#" class="mui-col-xs-3 " data-sort-type="price" data-sort="1">
+                                         价格
+                                         <span class="fa fa-angle-down"></span>
+                                     </a>
+                                     <a href="#" class="mui-col-xs-3" data-sort-type="num" data-sort="1">
+                                         销量
+                                         <span class="fa fa-angle-down"></span>
+                                     </a>
+                                     <a href="#" class="mui-col-xs-3">
+                                         折扣
+                                         <span class="fa fa-angle-down"></span>
+                                     </a>
+                                 </div>
+                            </div>
+                            <div class="sport-content">
+                                <div class="mui-row">
+                               
+                                </div>
+                             </div>
+                        
+            </div>
+    </div>
+</section>
+
+    <!-- <section class="main">
        <form action="">
            <input type="text" placeholder="请输入你想搜索的内容">
            <a href="#"  class="mui-btn mui-btn-primary searchIcon">搜索</a>
        </form>
-       
-    </section>
-
-
+       <div class="section">
+           <div class="mui-row">
+                <a href="#" class="mui-col-xs-3 active">
+                    上架时间
+                    <span class="fa fa-angle-down"></span>
+                </a>
+                <a href="#" class="mui-col-xs-3">
+                    上架时间
+                    <span class="fa fa-angle-down"></span>
+                </a>
+                <a href="#" class="mui-col-xs-3">
+                    上架时间
+                    <span class="fa fa-angle-down"></span>
+                </a>
+                <a href="#" class="mui-col-xs-3">
+                    上架时间
+                    <span class="fa fa-angle-down"></span>
+                </a>
+            </div>
+       </div>
+       <div class="sport-content">
+            <a href="">
+                <div class="box">
+                <img src="./images/product.jpg" alt="">
+                <p class="name">撒加快了发费萨拉；法；沙发发</p>
+                <p>￥588
+                    <span>￥800</span>
+                </p>
+                <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即购买</button>
+                </div>
+                </a>
+                <a href="">
+                    <div class="box">
+                        <img src="./images/product.jpg" alt="">
+                        <p class="name">撒加快了发费萨拉；法；沙发发</p>
+                        <p>￥588
+                            <span>￥800</span>
+                        </p>
+                        <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即购买</button>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="box">
+                        <img src="./images/product.jpg" alt="">
+                        <p class="name">撒加快了发费萨拉；法；沙发发</p>
+                        <p>￥588
+                            <span>￥800</span>
+                        </p>
+                        <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即购买</button>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="box">
+                        <img src="./images/product.jpg" alt="">
+                        <p class="name">撒加快了发费萨拉；法；沙发发</p>
+                        <p>￥588
+                            <span>￥800</span>
+                        </p>
+                        <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即购买</button>
+                    </div>
+                </a>
+        </div>
+    </section> -->
     <footer>
         <div class="mui-row">
             <a href="index.html" class="mui-col-sm-3  mui-col-xs-3 fa fa-home active">
@@ -48,6 +145,22 @@
             </a>
         </div>
     </footer>
+    <script id="product" type="text/html">
+        <!-- 渲染数据 -->
+        {{each data as value i}}
+        
+            <a href="" class="mui-col-xs-6">
+                <div class="box">
+                    <img src="{{value.pic[0].picAddr}}" alt="">
+                    <p class="name">{{value.proName}}</p>
+                    <p>￥{{value.price}}
+                        <span>￥{{value.oldPrice}}</span>
+                    </p>
+                    <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即购买</button>
+                </div>
+            </a>
+        {{/each}}
+    </script>
     
     <!-- 引入mui的js 提供特效的，轮播图等 -->
     <script src="./lib/mui/js/mui.js" ></script>
@@ -55,7 +168,9 @@
     <script src="./lib/zepto/zepto.min.js"></script>
     <!-- 引入模板引擎js，因为模板引擎依赖zepto 所以在zepto之后引入  用于渲染页面-->
     <script src="./lib/artTemplate/template.js"></script>
+   
     <!-- 最后引入自己的js -->
     <script src="./js/findProduct.js"></script>
+    
 </body>
 </html>

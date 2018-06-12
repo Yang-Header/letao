@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的乐购</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+</head>
+<body>
+
+    <div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+              <!--数据列表-->
+              <section class="main">
+                    <form action="">
+                        <input type="text" placeholder="请输入你想搜索的内容">
+                        <a href="#"  class="mui-btn mui-btn-primary searchIcon">搜索</a>
+                    </form>
+                    <div class="section">
+                        <div class="mui-row">
+                             <a href="#" class="mui-col-xs-3 active">
+                                 上架时间
+                                 <span class="fa fa-angle-down"></span>
+                             </a>
+                             <a href="#" class="mui-col-xs-3">
+                                 上架时间
+                                 <span class="fa fa-angle-down"></span>
+                             </a>
+                             <a href="#" class="mui-col-xs-3">
+                                 上架时间
+                                 <span class="fa fa-angle-down"></span>
+                             </a>
+                             <a href="#" class="mui-col-xs-3">
+                                 上架时间
+                                 <span class="fa fa-angle-down"></span>
+                             </a>
+                         </div>
+                    </div>
+                    <div class="sport-content">
+                         <a href="">
+                             <div class="box">
+                             <img src="./images/product.jpg" alt="">
+                             <p class="name">撒加快了发费萨拉；法；沙发发</p>
+                             <p>￥588
+                                 <span>￥800</span>
+                             </p>
+                             <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即购买</button>
+                             </div>
+                             </a>
+                             <a href="">
+                                 <div class="box">
+                                     <img src="./images/product.jpg" alt="">
+                                     <p class="name">撒加快了发费萨拉；法；沙发发</p>
+                                     <p>￥588
+                                         <span>￥800</span>
+                                     </p>
+                                     <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即购买</button>
+                                 </div>
+                             </a>
+                             <a href="">
+                                 <div class="box">
+                                     <img src="./images/product.jpg" alt="">
+                                     <p class="name">撒加快了发费萨拉；法；沙发发</p>
+                                     <p>￥588
+                                         <span>￥800</span>
+                                     </p>
+                                     <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即购买</button>
+                                 </div>
+                             </a>
+                             <a href="">
+                                 <div class="box">
+                                     <img src="./images/product.jpg" alt="">
+                                     <p class="name">撒加快了发费萨拉；法；沙发发</p>
+                                     <p>￥588
+                                         <span>￥800</span>
+                                     </p>
+                                     <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即购买</button>
+                                 </div>
+                             </a>
+                     </div>
+                 </section>
+            </div>
+          </div>
+        <script src="./lib/mui/js/mui.js" ></script> 
+    <script>
+
+       
+
+            mui.init({
+            pullRefresh : {
+            container:"#refreshContainer",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+            down : {
+            contentrefresh : "正在刷新...",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+            callback :function () {  } //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+        }
+  }
+  });
+       
+    
+    </script>
+    
+    
+</body>
+</html>

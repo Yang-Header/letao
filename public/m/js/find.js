@@ -6,6 +6,7 @@ $(function () {
     leTao.getLocalStorage();
     leTao.createLocalStorage();
     leTao.deleteLocalStorage();
+    leTao.clickLi();
     // leTao.demo();
   })
 
@@ -82,7 +83,7 @@ $(function () {
                 //查询数据 并渲染数据
                 
                 leTao.getLocalStorage();
-                this.href='findProduct.html';
+                this.href='fondProduct.html?search='+text;
 
               })
          },
@@ -120,10 +121,10 @@ $(function () {
               })
              
            },
-
-        //    demo:function(){
-        //     var arr = '"name":{"name":"xiaoming"}';
-        //     console.log(JSON.parse(arr));
-
-        //    }
+           clickLi:function () {
+               $('.hostoryData ul').on("click",'li',function () {
+                   var search=$(this).children('.product').html();
+                   window.location.href='fondProduct.html?search='+search;
+                 })
+             }
    }

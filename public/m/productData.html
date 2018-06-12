@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 站点图标 -->
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- 引入mui的css样式 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入自己的css样式 -->
+    <link rel="stylesheet/less" href="./less/findProduct.less">
+    <!-- 编译工具，没有编译工具不能解码less文件 -->
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+    <header id="header">
+        <a href="find.html" class="fa fa-arrow-left"></a>
+        <h4>搜索中心</h4>
+        <!-- <a href="#" class="fa fa-search" aria-hidden="true"></a> -->
+    </header>
+
+    <section class="main">
+
+        <div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                            
+            </div>
+    </div>
+</section>
+
+   
+    <footer>
+        <div class="mui-row">
+            <a href="index.html" class="mui-col-sm-3  mui-col-xs-3 fa fa-home active">
+                <span>首页</span>
+            </a>
+            <a href="category.html" class="mui-col-sm-3 mui-col-xs-3 fa fa-bars">
+                <span>分类</span>
+            </a>
+            <a href="" class="mui-col-sm-3 mui-col-xs-3 fa fa-shopping-cart">
+                <span>购物车</span>
+            </a>
+            <a href="" class="mui-col-sm-3 mui-col-xs-3 fa fa-user">
+                <span>会员中心</span>
+            </a>
+        </div>
+    </footer>
+    <script id="product" type="text/html">
+        <!-- 渲染数据 -->
+        {{each data as value i}}
+        
+            <a href="" class="mui-col-xs-6">
+                <div class="box">
+                    <img src="{{value.pic[0].picAddr}}" alt="">
+                    <p class="name">{{value.proName}}</p>
+                    <p>￥{{value.price}}
+                        <span>￥{{value.oldPrice}}</span>
+                    </p>
+                    <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即购买</button>
+                </div>
+            </a>
+        {{/each}}
+    </script>
+    
+    <!-- 引入mui的js 提供特效的，轮播图等 -->
+    <script src="./lib/mui/js/mui.js" ></script>
+    <!-- 引入获取元素的js zepto -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎js，因为模板引擎依赖zepto 所以在zepto之后引入  用于渲染页面-->
+    <script src="./lib/artTemplate/template.js"></script>
+   
+    <!-- 最后引入自己的js -->
+    <script src="./js/findProduct.js"></script>
+    
+</body>
+</html>
